@@ -5,9 +5,9 @@
       <h1 :class="`words ${this.word}`">{{ word }}</h1>
     </div>
     <div class="links">
-      <div><img src="../assets/code.svg" alt="project"></div>
-      <div><img src="../assets/text-file-line.svg" alt="resume"></div>
-      <div><img src="../assets/github.svg" alt="github"></div>
+      <div @click="$router.push({ name: 'Projects' })"><img src="../assets/code.svg" alt="project"><h2 class="link-my-projects">My projects</h2></div>
+      <div @click="$router.push({ name: 'Resume' })"><img src="../assets/text-file-line.svg" alt="resume"><h2 class="link-resume">Resume</h2></div>
+      <a href="https://github.com/janolaerts"><img src="../assets/github.svg" alt="github"><h2 class="link-github">Github</h2></a>
     </div>
     <div class="contact">
       <button @click="$router.push({ name: 'Contact' })">Contact me</button>
@@ -25,7 +25,8 @@ export default {
      word: 'applications',
      words: ['applications', 'websites', 'market places', 'native apps'],
      index: 0,
-     button: false
+     button: false,
+     github: 'https://github.com/janolaerts'
     }
   },
   created(){
@@ -88,52 +89,68 @@ export default {
   right: 10px;
 
 }
-.intro .links div{
+.intro .links div, .intro .links a{
   position: absolute;
   background: white;
   width: 0px;
   height: 40px;
   right: 2%;
 }
-.intro .links img{
+.intro .links img, .intro .links a img{
   position: absolute;
   width: 40px;
   height: 40px;
   cursor: pointer;
-  right: 2%;
+  right: 6%;
 }
-.intro .links :nth-child(1){
+.intro .links div:nth-child(1){
   margin-top: 0px;
   animation: fall1 2s linear;
   animation-timing-function: ease;
 }
-.intro .links :nth-child(2){
+.intro .links div:nth-child(2){
   margin: 75px 0;
   animation: fall2 1.5s linear;
   animation-timing-function: ease;
 }
-.intro .links :nth-child(3){
+.intro .links a{
   margin: 150px 0;
   animation: fall3 1s linear;
   animation-timing-function: ease;
 }
 .intro .links div:nth-child(1):hover{
-  background: white;
+  background: #cd6689;
   right: 0%;
   animation: menu1 1s linear forwards;
   animation-timing-function: ease;
 }
 .intro .links div:nth-child(2):hover{
-  background: white;
+  background: #cd7766;
   right: 0%;
   animation: menu1 1s linear forwards;
   animation-timing-function: ease;
 }
-.intro .links div:nth-child(3):hover{
-  background: white;
+.intro .links a:hover{
+  background: #cd9166;
   right: 0%;
   animation: menu1 1s linear forwards;
   animation-timing-function: ease;
+}
+.intro .links h2{
+  color: whitesmoke;
+  position: fixed;
+  right: 60px;
+  width: 150px;
+  cursor: pointer;
+}
+.intro .links h2.link-my-projects{
+  bottom: 462px;
+}
+.intro .links h2.link-resume{
+  bottom: 387px;
+}
+.intro .links h2.link-github{
+  bottom: 312px;
 }
 .intro .contact{
   position: absolute;
@@ -176,7 +193,7 @@ export default {
     transform: translateY(-15px);
   }
 }
-@keyframes fall1{
+/*@keyframes fall1{
   from{
     top: -300%
   }
@@ -199,13 +216,13 @@ export default {
   to{
     top: 0%
   }
-}
+}*/
 @keyframes menu1{
   from{
     width: 0px
   }
   to{
-    width: 250px
+    width: 210px
   }
 }
 @keyframes menu2{
@@ -213,7 +230,7 @@ export default {
     width: 0px
   }
   to{
-    width: 250px
+    width: 210px
   }
 }
 @keyframes menu3{
@@ -221,7 +238,7 @@ export default {
     width: 0px
   }
   to{
-    width: 250px
+    width: 210px
   }
 }
 
