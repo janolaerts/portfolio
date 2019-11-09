@@ -1,18 +1,31 @@
 <template>
   <div class="projects">
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
-    <h1><span>M</span><span>y</span><span>-</span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
-    <div class="flex-container">
-      <div class="project1">
-        <h2>Jatha Ventas</h2>
+    <h1 class="my-projects"><span>M</span><span>y</span><span>-</span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
+    <div class="projects-container">
+      <div class="project1"><img width="400px" src="../assets/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
+      <div class="project1-info">
+        <h1>Jatha Ventas</h1>
+        <p class="intro">An application to keep track of your sold products</p>
+        <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="javascript"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" alt="firebase"></p>
+        <button>Visit website</button>
       </div>
-      <div class="project2">
-        <h2>Taco App</h2>
+      <div class="project2"><img width="400px" src="../assets/Taco App Laptop.png" alt="taco-app"></div>
+      <div class="project2-info">
+        <h1>Taco App</h1>
+        <p class="intro">A mockup of an order application</p>
+        <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" alt="react"></p>
+        <button>Visit website</button>
       </div>
-      <div class="project3">
-        <h2>Askbot</h2>
+      <div class="project3"><img width="400px" src="../assets/Askbot Laptop.png" alt=""></div>
+      <div class="project3-info">
+        <h1>Askbot</h1>
+        <p class="intro">An API which allows to upload and ask questions</p>
+        <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/node-dot-js.svg" alt="node"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" alt="mongodb"> </p>
+        <button>Visit website</button>
       </div>
     </div>
+    <div @click="$router.push({ name: 'About' })" class="circle"><h1>J</h1></div>
   </div>
 </template>
 
@@ -28,6 +41,14 @@ export default {
 </script>
 
 <style>
+.projects{
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .projects .menu{
   position: fixed;
   right: 2%;
@@ -35,25 +56,16 @@ export default {
   cursor: pointer;
   z-index: 1010;
 }
-.projects{
-  background: #cd9166;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.projects h1{
+.projects h1.my-projects{
   position: fixed;
-  color: #cd6677;
-  font-size: 300%;
+  color: white;
   padding: 20px;
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   padding: 0px 0px 0px 2.5%;
   z-index: 1000;
-  background: rgba(205, 145, 102, .5);
+  background: rgba(0, 0, 0, .5);
   width: 100%;
 }
 .projects h1 span{
@@ -94,39 +106,92 @@ export default {
 .projects h1 span:nth-child(11){
   animation: slide .5s linear forwards;
 }
-.flex-container{
+.projects-container{
   position: relative;
+  background: white;
   top: 75px;
-  width: 95%;
-  height: 650px;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
-}
-.flex-container .project1{
-  background: url('../assets/jatha-ventas.png') no-repeat top;
-  background-size:cover;
-  flex-basis: 450px;
-  flex-grow: 1;
-  margin: 5px;
+  justify-content: space-around;
   border-radius: 10px;
 }
-.flex-container .project2{
-  background: url('../assets/taco-app.png') no-repeat top;
-  background-size: cover;
-  flex-basis: 450px;
-  flex-grow: 1;
-  margin: 5px;
-  border-radius: 10px;
+.projects-container h1{
+  color: #cd7766;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  position: relative;
+  text-align: center;
 }
-.flex-container .project3{
-  background: url('../assets/askbot.png') no-repeat top;
-  background-size: cover;
-  flex-basis: 450px;
-  flex-grow: 1;
-  margin: 5px;
-  border-radius: 10px;
+.projects-container .project1-info{
+  background: green;
+}
+.projects-container .project1-info .intro{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+.projects-container .project1-info .technologies{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 15px;
+}
+.projects-container .project1-info button{
+  top: 30px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 5px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  float: right;
+  background: none;
+  border: 2px solid #cd7766;
+}
+.projects-container .project2-info{
+  background: red;
+}
+.projects-container .project2-info .intro{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+.projects-container .project2-info .technologies{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 15px;
+}
+.projects-container .project2-info button{
+  top: 30px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 5px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  float: right;
+  background: none;
+  border: 2px solid #cd7766;
+}
+.projects-container .project3-info{
+  background: blue;
+}
+.projects-container .project3-info .intro{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+.projects-container .project3-info .technologies{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 15px;
+}
+.projects-container .project3-info button{
+  top: 30px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px 5px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  float: right;
+  background: none;
+  border: 2px solid #cd7766;
 }
 
 /* animations */

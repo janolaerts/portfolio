@@ -1,27 +1,28 @@
 <template>
   <div class="about">
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/three-horizontal-lines.svg" width="30px" height="30px" alt="menu"></div>
-    <div>
+    <div class="words-wrapper">
       <h1>Hello, I am Jan and I build</h1>
       <h1 :class="`words ${this.word}`">{{ word }}</h1>
     </div>
     <div class="technologies">
       <h1>I use <span>{{ technology }}</span></h1>
       <div class="logos">
-        <img @mouseover="showTech('HTML')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/html5.svg" />
-        <img @mouseover="showTech('CSS')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/css3.svg" />
-        <img @mouseover="showTech('JavaScript')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" />
-        <img @mouseover="showTech('React.js')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" />
-        <img @mouseover="showTech('Vue.js')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/vue-dot-js.svg" />
-        <img @mouseover="showTech('Node.js')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/node-dot-js.svg" />
-        <img @mouseover="showTech('Firebase (db & auth)')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" />
-        <img @mouseover="showTech('MongoDB')" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" />
+        <img @mouseover="showTech('HTML')" height="32" width="32" src="../assets/html5.svg" />
+        <img @mouseover="showTech('CSS')" height="32" width="32" src="../assets/css3.svg" />
+        <img @mouseover="showTech('JavaScript')" height="32" width="32" src="../assets/javascript.svg" />
+        <img @mouseover="showTech('React.js')" height="32" width="32" src="../assets/react.svg" />
+        <img @mouseover="showTech('Vue.js')" height="32" width="32" src="../assets/vue-dot-js.svg" />
+        <img @mouseover="showTech('Node.js')" height="32" width="32" src="../assets/node-dot-js.svg" />
+        <img @mouseover="showTech('Firebase (db & auth)')" height="32" width="32" src="../assets/firebase.svg" />
+        <img @mouseover="showTech('MongoDB')" height="32" width="32" src="../assets/mongodb.svg" />
       </div>
     </div>
     <div class="contact">
       <button @click="$router.push({ name: 'Contact' })">Contact me</button>
     </div>
       <img class="arrow" src="../assets/arrow.svg" alt="contact">
+      <div @click="$router.push({ name: 'About' })" class="circle"><h1>J</h1></div>
   </div>
 </template>
 
@@ -60,7 +61,7 @@ export default {
 
 <style>
 .about{
-  background: mediumaquamarine;
+  background: black;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -77,13 +78,13 @@ export default {
 .about .menu img{
   cursor: pointer;
 }
-.about h1{
+.about .words-wrapper h1{
   position: relative;
   color: white;
-  padding: 0px 20px;
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
+  top: 0px;
 }
 .about h1.applications{
   color: 	#cd6689;
@@ -99,7 +100,7 @@ export default {
 }
 .about div .words{
   position: relative;
-  left: 0px;
+  
 }
 .about .technologies{
   position: absolute;
@@ -107,12 +108,15 @@ export default {
   height: 100px;
   bottom: 140px;
   border-top: 2px solid #cd6677;
-  border-bottom: 2px solid #cd6677;
+
 }
 .about .technologies h1{
   position: relative;
   font-size: 40px;
   text-align: center;
+  color: white;
+  bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .about .technologies h1 span{
   color: #cd9166;
@@ -121,7 +125,7 @@ export default {
   position: relative;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  top: 20%;
+  bottom: 32.5px;
 }
 .about .technologies .logos img{
   margin: 0 auto;
@@ -129,24 +133,24 @@ export default {
 .about .contact{
   position: absolute;
   display: inline-block;
-  bottom: 90px;
+  bottom: 80px;
   width: 100%;
   text-align: center;
 }
 .about .contact button{
   position: relative;
-  border: 2px solid navy;
+  border: 2px solid #cd6689;
   padding: 10px;
-  color:navy;
+  color:#cd6689;
   width: 170px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
 }
 .about .contact button:hover{
-  border: 2px solid navy;
-  color: mediumaquamarine;
-  background: navy;
+  border: 2px solid #cd6689;
+  color: black;
+  background: #cd6689;
 }
 .about .arrow{
   position: absolute;
@@ -155,6 +159,27 @@ export default {
   height: 50px;
   bottom: 1%;
   animation: idle 2s linear infinite alternate;
+  animation-timing-function: ease;
+}
+.about .circle{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 15px;
+  left: 15px;
+  border: 4px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.about .circle h1{
+  color: white;
+  position: relative;
+  text-align: center;
+  top: -25%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about .circle:hover{
+  animation: pop 1s linear;
   animation-timing-function: ease;
 }
 
@@ -168,9 +193,24 @@ export default {
   }
 }
 
+@keyframes pop{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(.9);
+  }
+  90%{
+    transform: scale(1.1)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
 /* responsive rules */
 @media all and (max-width: 991px){
-  .about h1{
+  .about .words-wrapper h1{
     font-size: 40px;
   }
   .about .technologies h1{
@@ -179,7 +219,7 @@ export default {
 }
 
 @media all and (max-width: 768px){
-  .about h1{
+  .about .words-wrapper h1{
     font-size: 35px;
   }
   .about .technologies h1{
@@ -188,7 +228,7 @@ export default {
 }
 
 @media all and (max-width: 575px){
-  .about h1{
+  .about .words-wrapper h1{
     font-size: 30px;
   }
   .about .technologies h1{
