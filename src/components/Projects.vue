@@ -1,5 +1,6 @@
 <template>
   <div class="projects">
+    <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
     <h1><span>M</span><span>y</span><span>-</span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
     <div class="flex-container">
       <div class="project1">
@@ -27,6 +28,13 @@ export default {
 </script>
 
 <style>
+.projects .menu{
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+  z-index: 1010;
+}
 .projects{
   background: #cd9166;
   width: 100%;
