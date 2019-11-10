@@ -9,8 +9,8 @@
         <p class="intro">An application to keep track of your sold products</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="javascript"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" alt="firebase"></p>
         <div class="buttons">
-          <button class="website">Visit website</button>
-          <button>Source code</button>
+          <button class="website"> <a href="https://jatha-ventas.web.app/" target="_blank">Visit website</a></button>
+          <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
         </div>
       </div>
       <div class="project2"><img width="400px" src="../assets/Taco App Laptop.png" alt="taco-app"></div>
@@ -18,15 +18,17 @@
         <h1>Taco App</h1>
         <p class="intro">A mockup of an order application</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" alt="react"></p>
-        <button>Visit website</button>
-        <button>Source code</button>
+        <div class="buttons">
+          <button class="website"><a href="https://taco-app-ad29b.web.app/" target="_blank">Visit website</a></button>
+          <button><a href="https://github.com/janolaerts/Taco-App" target="_blank">Source code</a></button>
+        </div>
       </div>
       <div class="project3"><img width="400px" src="../assets/Askbot Laptop.png" alt=""></div>
       <div class="project3-info">
         <h1>Askbot</h1>
         <p class="intro">An API which allows to upload and ask questions</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/node-dot-js.svg" alt="node"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" alt="mongodb"> </p>
-        <button>Source code</button>
+        <button><a href="https://github.com/janolaerts/Askbot" target="_blank">Source code</a></button>
       </div>
     </div>
     <div @click="$router.push({ name: 'About' })" class="circle"><h1 @click="$router.push({ name: 'About' })">J</h1></div>
@@ -144,6 +146,7 @@ export default {
 }
 .projects-container .project1-info .buttons{
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   width: 100%;
 }
@@ -151,20 +154,18 @@ export default {
   padding: 10px 5px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: none;
-  border: 2px solid #cd7766;
+border: 2px solid #cd7766;
   cursor: pointer;
   width: 100px;
   position: relative;
-  bottom: -3px;
-  color: #cd7766;
+  bottom: 2px;
+}
+.projects-container .project1-info button:hover{
+  background: #cd7766;
 }
 .projects-container .project1-info .buttons .website{
   position: relative;
-
-}
-.projects-container .project1-info button:hover{
-  color: white;
-  background: #cd7766;
+  justify-self:end;
 }
 .projects-container .project2-info{
   flex-grow: 1;
@@ -181,22 +182,27 @@ export default {
   position: relative;
   top: -5px;
 }
+.projects-container .project2-info .buttons{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
 .projects-container .project2-info button{
   padding: 10px 5px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: none;
   border: 2px solid #cd7766;
   cursor: pointer;
-  display: block;
-  margin: 0 auto 5px auto;
+  width: 100px;
   position: relative;
-  bottom: -3px;
-  color: #cd7766;
-  float: left;
-  margin-right: 10px;
+  bottom: 2px;
+}
+.projects-container .project2-info .buttons .website{
+  position: relative;
+  justify-self: end;
 }
 .projects-container .project2-info button:hover{
-  color: white;
   background: #cd7766;
 }
 .projects-container .project3-info{
@@ -214,7 +220,7 @@ export default {
   top: -5px;
 }
 .projects-container .project3-info button{
-  padding: 10px 5px;
+  padding: 10px 10px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: none;
   border: 2px solid #cd7766;
@@ -223,11 +229,9 @@ export default {
   display: block;
   margin: 0 auto 5px auto;
   position: relative;
-  bottom: -3px;
-  color: #cd7766;
+  bottom: 3px;
 }
 .projects-container .project3-info button:hover{
-  color: white;
   background: #cd7766;
 }
 .projects .circle{
@@ -237,7 +241,6 @@ export default {
   bottom: 15px;
   left: 15px;
   border: 4px solid black;
-  border-radius: 30px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -252,6 +255,54 @@ export default {
 .projects .circle:hover{
   animation: pop 1s linear;
   animation-timing-function: ease;
+}
+.projects .projects-container a{
+  text-decoration: none;
+  color:navy;
+}
+
+/* responsive design */
+@media all and (max-width: 991px){
+  .projects h1.my-projects{
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .projects h1.my-projects{
+    font-size: 40px;
+  }
+  .projects .circle{
+    width: 40px;
+    height: 40px;
+  }
+  .projects .circle h1{
+    position: relative;
+    top: -45%;
+  }
+}
+
+@media all and (max-width: 575px){
+  .projects h1.my-projects{
+    font-size: 30px;
+  }
+  .projects-container .project1 img{
+    width: 300px;
+  }
+  .projects-container .project2 img{
+    width: 300px;
+  }
+  .projects-container .project3 img{
+    width: 300px;
+  }
+  .projects .circle{
+    width: 30px;
+    height: 30px;
+  }
+  .projects .circle h1{
+    position: relative;
+    top: -80%;
+  }
 }
 
 /* animations */

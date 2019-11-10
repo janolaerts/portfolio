@@ -84,8 +84,10 @@ export default {
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
-  top: 0px;
-  text-align: center;
+  top: 90px;
+  width: 50%;
+  left: 15px;
+
 }
 .about h1.applications{
   color: 	#cd6689;
@@ -101,7 +103,6 @@ export default {
 }
 .about div .words{
   position: relative;
-  
 }
 .about .technologies{
   position: absolute;
@@ -109,7 +110,6 @@ export default {
   height: 100px;
   bottom: 140px;
   border-top: 2px solid #cd6677;
-
 }
 .about .technologies h1{
   position: relative;
@@ -169,7 +169,6 @@ export default {
   bottom: 15px;
   left: 15px;
   border: 4px solid white;
-  border-radius: 30px;
   cursor: pointer;
 }
 .about .circle h1{
@@ -209,7 +208,7 @@ export default {
   }
 }
 
-/* responsive rules */
+/* responsive design */
 @media all and (max-width: 991px){
   .about .words-wrapper h1{
     font-size: 40px;
@@ -226,14 +225,38 @@ export default {
   .about .technologies h1{
     font-size: 30px;
   }
+  .about .circle{
+    width: 40px;
+    height: 40px;
+  }
+  .about .circle h1{
+    position: relative;
+    top: -45%;
+  }
 }
 
 @media all and (max-width: 575px){
   .about .words-wrapper h1{
-    font-size: 30px;
+    font-size: 25px;
+    top: 60px;
+  }
+  .about .technologies{
+    border: none;
   }
   .about .technologies h1{
-    font-size: 25px;
+    margin-top: -1px;
+    font-size: 20px;
+  }
+  .about .circle{
+    width: 30px;
+    height: 30px;
+  }
+  .about .circle h1{
+    position: relative;
+    top: -80%;
+  }
+  .about .technologies{
+    bottom: 70px;
   }
 }
 

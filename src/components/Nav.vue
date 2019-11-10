@@ -43,7 +43,8 @@ export default {
   height: 25%;
   width: 45px;
   top: 35%;
-  left: 60vw;
+  /*left: 60vw;*/
+  right: 2%;
 }
 .links div, .links a{
   position: absolute;
@@ -98,7 +99,7 @@ export default {
 .links h2{
   color: whitesmoke;
   position: fixed;
-  right: 40%;
+  right: 80px;
   width: 150px;
   cursor: pointer;
   margin-top: 6px;
@@ -110,7 +111,6 @@ export default {
   top: 15px;
   left: 15px;
   border: 4px solid white;
-  border-radius: 30px;
   cursor: pointer;
 }
 .circle h1{
@@ -123,6 +123,41 @@ export default {
 .circle:hover{
   animation: pop 1s linear;
   animation-timing-function: ease;
+}
+
+/* responsive rules */
+@media all and (max-width: 1300px){
+  .links h2{
+    right: 60px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .circle{
+    width: 40px;
+    height: 40px;
+  }
+  .circle h1{
+    position: relative;
+    top: -45%;
+  }
+}
+
+@media all and (max-width: 575px){
+  .circle{
+    width: 30px;
+    height: 30px;
+  }
+  .circle h1{
+    position: relative;
+    top: -80%;
+  }
+  .links{
+    right: 2%;
+  }
+  .links h2{
+    right: 50px;
+  }
 }
 
 /* animations */
@@ -141,7 +176,6 @@ export default {
   }
 }
 
-/* responsive rules */
 @keyframes menu{
   from{
     width: 0px
