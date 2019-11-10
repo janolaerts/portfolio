@@ -107,7 +107,7 @@ export default {
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 15px;
+  top: 15px;
   left: 15px;
   border: 4px solid white;
   border-radius: 30px;
@@ -123,6 +123,22 @@ export default {
 .circle:hover{
   animation: pop 1s linear;
   animation-timing-function: ease;
+}
+
+/* animations */
+@keyframes pop{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(.9);
+  }
+  90%{
+    transform: scale(1.1)
+  }
+  100%{
+    transform: scale(1)
+  }
 }
 
 /* responsive rules */

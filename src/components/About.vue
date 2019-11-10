@@ -85,6 +85,7 @@ export default {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   top: 0px;
+  text-align: center;
 }
 .about h1.applications{
   color: 	#cd6689;
