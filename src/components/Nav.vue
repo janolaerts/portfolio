@@ -7,7 +7,6 @@
     <div @click="$router.push({ name: 'Resume' })"><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></div>
     <a href="https://github.com/janolaerts"><img src="../assets/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
   </div>
-  <div @click="$router.push({ name: 'About' })" class="circle"><h1>J</h1></div>
 </div>
 </template>
 
@@ -104,26 +103,6 @@ export default {
   cursor: pointer;
   margin-top: 6px;
 }
-.circle{
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  top: 15px;
-  left: 15px;
-  border: 4px solid white;
-  cursor: pointer;
-}
-.circle h1{
-  color: white;
-  position: relative;
-  text-align: center;
-  top: -25%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.circle:hover{
-  animation: pop 1s linear;
-  animation-timing-function: ease;
-}
 
 /* responsive rules */
 @media all and (max-width: 1300px){
@@ -133,25 +112,11 @@ export default {
 }
 
 @media all and (max-width: 768px){
-  .circle{
-    width: 40px;
-    height: 40px;
-  }
-  .circle h1{
-    position: relative;
-    top: -45%;
-  }
+
 }
 
 @media all and (max-width: 575px){
-  .circle{
-    width: 30px;
-    height: 30px;
-  }
-  .circle h1{
-    position: relative;
-    top: -80%;
-  }
+
   .links{
     right: 2%;
   }
@@ -161,20 +126,6 @@ export default {
 }
 
 /* animations */
-@keyframes pop{
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(.9);
-  }
-  90%{
-    transform: scale(1.1)
-  }
-  100%{
-    transform: scale(1)
-  }
-}
 
 @keyframes menu{
   from{

@@ -31,7 +31,6 @@
         <button><a href="https://github.com/janolaerts/Askbot" target="_blank">Source code</a></button>
       </div>
     </div>
-    <div @click="$router.push({ name: 'About' })" class="circle"><h1 @click="$router.push({ name: 'About' })">J</h1></div>
   </div>
 </template>
 
@@ -234,28 +233,6 @@ border: 2px solid #cd7766;
 .projects-container .project3-info button:hover{
   background: #cd7766;
 }
-.projects .circle{
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 15px;
-  left: 15px;
-  border: 4px solid black;
-  cursor: pointer;
-  z-index: 1000;
-}
-.projects .circle h1{
-  color: black;
-  position: relative;
-  text-align: center;
-  top: -25%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  cursor: pointer;
-}
-.projects .circle:hover{
-  animation: pop 1s linear;
-  animation-timing-function: ease;
-}
 .projects .projects-container a{
   text-decoration: none;
   color:navy;
@@ -272,14 +249,6 @@ border: 2px solid #cd7766;
   .projects h1.my-projects{
     font-size: 40px;
   }
-  .projects .circle{
-    width: 40px;
-    height: 40px;
-  }
-  .projects .circle h1{
-    position: relative;
-    top: -45%;
-  }
 }
 
 @media all and (max-width: 575px){
@@ -295,14 +264,6 @@ border: 2px solid #cd7766;
   .projects-container .project3 img{
     width: 300px;
   }
-  .projects .circle{
-    width: 30px;
-    height: 30px;
-  }
-  .projects .circle h1{
-    position: relative;
-    top: -80%;
-  }
 }
 
 /* animations */
@@ -312,21 +273,6 @@ border: 2px solid #cd7766;
   }
   to{
     left: 0px;
-  }
-}
-
-@keyframes pop{
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(.9);
-  }
-  90%{
-    transform: scale(1.1)
-  }
-  100%{
-    transform: scale(1)
   }
 }
 </style>

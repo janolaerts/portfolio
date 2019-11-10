@@ -22,7 +22,6 @@
       <button @click="$router.push({ name: 'Contact' })">Contact me</button>
     </div>
       <img class="arrow" src="../assets/arrow.svg" alt="contact">
-      <div @click="$router.push({ name: 'About' })" class="circle"><h1>J</h1></div>
   </div>
 </template>
 
@@ -162,26 +161,6 @@ export default {
   animation: idle 2s linear infinite alternate;
   animation-timing-function: ease;
 }
-.about .circle{
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 15px;
-  left: 15px;
-  border: 4px solid white;
-  cursor: pointer;
-}
-.about .circle h1{
-  color: white;
-  position: relative;
-  text-align: center;
-  top: -25%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.about .circle:hover{
-  animation: pop 1s linear;
-  animation-timing-function: ease;
-}
 
 /* animations */
 @keyframes idle{
@@ -190,21 +169,6 @@ export default {
   }
   to{
     transform: translateY(-15px);
-  }
-}
-
-@keyframes pop{
-  0%{
-    transform: scale(1);
-  }
-  50%{
-    transform: scale(.9);
-  }
-  90%{
-    transform: scale(1.1)
-  }
-  100%{
-    transform: scale(1)
   }
 }
 
@@ -225,14 +189,6 @@ export default {
   .about .technologies h1{
     font-size: 30px;
   }
-  .about .circle{
-    width: 40px;
-    height: 40px;
-  }
-  .about .circle h1{
-    position: relative;
-    top: -45%;
-  }
 }
 
 @media all and (max-width: 575px){
@@ -250,10 +206,6 @@ export default {
   .about .circle{
     width: 30px;
     height: 30px;
-  }
-  .about .circle h1{
-    position: relative;
-    top: -80%;
   }
   .about .technologies{
     bottom: 70px;
