@@ -4,30 +4,30 @@
   <div class="links">
     <div @click="$router.push({ name: 'About' })"><img src="../assets/menu.svg" width="40px" height="40px" alt="about"><h2 class="link-about">About me</h2></div>
     <div @click="$router.push({ name: 'Projects' })"><img src="../assets/code.svg" width="40px" height="40px" alt="project"><h2 class="link-my-projects">My projects</h2></div>
-    <a target="_blank"><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
-    <a href="https://github.com/janolaerts"><img src="../assets/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
+    <a @click="downloadPDF"><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
+    <a href="https://github.com/janolaerts" target="_blank"><img src="../assets/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
   </div>
-  <pdf src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf"></pdf>
+  <!--<pdf src="@/assets/curriculum.pdf"></pdf>-->
 </div>
 </template>
 
 <script>
-import pdf from 'vue-pdf'
-//import axios from 'axios'
+//import pdf from 'vue-pdf'
+import axios from 'axios'
 
 export default {
   name: 'Nav',
-  components: { pdf },
+  //components: { pdf },
   data(){
     return {
-
+  
     }
   },
   methods: {
     downloadPDF(){
       axios({
         method: 'GET',
-        url: '~assets/curriculum.pdf',
+        url: 'curriculum.pdf',
         responseType: 'blob'
       })
       .then(response => {
