@@ -4,46 +4,44 @@
   <div class="links">
     <div @click="$router.push({ name: 'About' })"><img src="../assets/menu.svg" width="40px" height="40px" alt="about"><h2 class="link-about">About me</h2></div>
     <div @click="$router.push({ name: 'Projects' })"><img src="../assets/code.svg" width="40px" height="40px" alt="project"><h2 class="link-my-projects">My projects</h2></div>
-    <a><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
+    <a target="_blank"><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
     <a href="https://github.com/janolaerts"><img src="../assets/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
   </div>
-  <pdf :src="src"></pdf>
+  <pdf src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf"></pdf>
 </div>
 </template>
 
 <script>
 import pdf from 'vue-pdf'
+//import axios from 'axios'
 
 export default {
   name: 'Nav',
   components: { pdf },
   data(){
     return {
-      src: '../{relative_path}/public/curriculum.pdf'
+
     }
   },
   methods: {
-    /*downloadPDF(){
-      fetch({
-        method: 'get',
-        url: 'https://s1.q4cdn.com/806093406/files/doc_downloads/test.pdf',
-        responseType: 'arraybuffer'
+    downloadPDF(){
+      axios({
+        method: 'GET',
+        url: '~assets/curriculum.pdf',
+        responseType: 'blob'
       })
-      .then(response => this.forceFileDownload(response))
+      .then(response => {
+        let fileURL = window.URL.createObjectURL(new Blob ([response.data], { type: 'application/pdf' }))
+        let fileLink = document.createElement('a')
+
+        fileLink.href = fileURL
+        fileLink.setAttribute('download', 'curriculum.pdf')
+        document.body.appendChild(fileLink)
+        
+        fileLink.click()
+      })
       .catch(error => console.log(error))
-    },
-    forceFileDownload(response){
-      const file = window.URL.createObjectURL(new Blob([response.data], { type: 'application/pdf' }))
-      const link = document.createElement('a')
-      link.href = file
-      link.setAttribute('download', 'curriculum.pdf')
-      document.body.appendChild(link)
-      link.click()
-    }*/
-  },
-  mounted(){
-    this.src = pdf.createLoadingTask(this.src)
-    this.src.then(response => this.numPages = response.numPages)
+    }
   }
 }
 </script>
