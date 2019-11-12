@@ -76,40 +76,40 @@ export default {
   position: relative;
   animation-timing-function: ease;
 }
-.projects h1 span:nth-child(1){
-  animation: slide 1.5s linear forwards;
+/*.projects h1 span:nth-child(1){
+  animation: slideLeft 1.5s linear forwards;
 }
 .projects h1 span:nth-child(2){
-  animation: slide 1.4s linear forwards;
+  animation: slideLeft 1.4s linear forwards;
 }
 .projects h1 span:nth-child(3){
   visibility: hidden;
-  animation: slide 1.3s linear forwards;
+  animation: slideLeft 1.3s linear forwards;
 }
 .projects h1 span:nth-child(4){
-  animation: slide 1.2s linear forwards;
+  animation: slideLeft 1.2s linear forwards;
 }
 .projects h1 span:nth-child(5){
-  animation: slide 1.1s linear forwards;
+  animation: slideLeft 1.1s linear forwards;
 }
 .projects h1 span:nth-child(6){
-  animation: slide 1s linear forwards;
+  animation: slideLeft 1s linear forwards;
 }
 .projects h1 span:nth-child(7){
-  animation: slide .9s linear forwards;
+  animation: slideLeft .9s linear forwards;
 }
 .projects h1 span:nth-child(8){
-  animation: slide .8s linear forwards;
+  animation: slideLeft .8s linear forwards;
 }
 .projects h1 span:nth-child(9){
-  animation: slide .7s linear forwards;
+  animation: slideLeft .7s linear forwards;
 }
 .projects h1 span:nth-child(10){
-  animation: slide .6s linear forwards;
+  animation: slideLeft .6s linear forwards;
 }
 .projects h1 span:nth-child(11){
-  animation: slide .5s linear forwards;
-}
+  animation: slideLeft .5s linear forwards;
+}*/
 .projects-container{
   position: relative;
   background: white;
@@ -128,10 +128,32 @@ export default {
   position: relative;
   text-align: center;
 }
+.projects-container .project1 img{
+  position: relative;
+  left: -200%;
+  animation: slideLeft 1s .75s linear forwards;
+  animation-timing-function: ease;
+}
+.projects-container .project2 img{
+  position: relative;
+  left: -200%;
+  animation: slideLeft 1s 1.5s linear forwards;
+  animation-timing-function: ease;
+}
+.projects-container .project3 img{
+  position: relative;
+  left: -200%;
+  animation: slideLeft 1s 2.25s linear forwards;
+  animation-timing-function: ease;
+}
 .projects-container .project1-info{
   flex-grow: 1;
   flex-basis: 400px;
   border-bottom: 2px solid #cd7766;
+  position: relative;
+  transform: rotateX(90deg);
+  animation: flip .75s 1s linear forwards;
+  animation-timing-function: ease;
 }
 .projects-container .project1-info .intro{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -153,7 +175,7 @@ export default {
   padding: 10px 5px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: none;
-border: 2px solid #cd7766;
+  border: 2px solid #cd7766;
   cursor: pointer;
   width: 100px;
   position: relative;
@@ -170,6 +192,9 @@ border: 2px solid #cd7766;
   flex-grow: 1;
   flex-basis: 400px;
   border-bottom: 2px solid #cd7766;
+  transform: rotateX(90deg);
+  animation: flip .75s 1.75s linear forwards;
+  animation-timing-function: ease;
 }
 .projects-container .project2-info .intro{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -207,6 +232,9 @@ border: 2px solid #cd7766;
 .projects-container .project3-info{
   flex-grow: 1;
   flex-basis: 400px;
+  transform: rotateX(90deg);
+  animation: flip .75s 2.5s linear forwards;
+  animation-timing-function: ease;
 }
 .projects-container .project3-info .intro{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -267,12 +295,21 @@ border: 2px solid #cd7766;
 }
 
 /* animations */
-@keyframes slide{
+@keyframes slideLeft{
   from{
-    left: -1000px;
+    left: -200%;
   }
   to{
-    left: 0px;
+    left: 0%;
+  }
+}
+
+@keyframes flip{
+  from{
+    transform: rotateX(90deg);
+  }
+  to{
+    transform: rotateX(0deg);
   }
 }
 </style>

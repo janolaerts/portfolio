@@ -92,7 +92,6 @@ export default {
   width: 50%;
   text-align: center;
   border-radius: 10px;
-  top: 50px;
 }
 .contact form input{
   width: 90%;
@@ -119,13 +118,19 @@ export default {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: mediumaquamarine;
 }
-.contact form .nameStyle{
-  color: white;
-  border-bottom: 2px solid blue;
-}
 .contact form .feedback{
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 10px;
+}
+
+/* responsive design */
+@media all and (max-width: 768px){
+  .contact form button{
+    width:50%;
+  }
+  .contact form {
+    width: 100%;
+  }
 }
 </style>
