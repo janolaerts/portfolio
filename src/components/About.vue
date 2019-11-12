@@ -134,7 +134,7 @@ export default {
   display: block;
   width: 100%;
   text-align: center;
-  height: 100px;
+  height: 0px;
   top: 100%;
 }
 .about .contact button{

@@ -105,6 +105,21 @@ export default {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
 }
+.contact form input:nth-child(1){
+  transform: rotateY(90deg);
+  animation: skew .75s linear forwards;
+  animation-timing-function: ease;
+}
+.contact form input:nth-child(2){
+  transform: rotateY(90deg);
+  animation: skew .75s .2s linear forwards;
+  animation-timing-function: ease;
+}
+.contact form input:nth-child(3){
+  transform: rotateY(90deg);
+  animation: skew .75s .4s linear forwards;
+  animation-timing-function: ease;
+}
 .contact form button{
   width: 25%;
   margin-top: 10px;
@@ -113,6 +128,11 @@ export default {
   background: white;
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  position: relative;
+  bottom: 300px;
+  animation: drop 1s linear forwards;
+  animation-timing-function: ease;
 }
 .contact form input::-webkit-input-placeholder{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -131,6 +151,25 @@ export default {
   }
   .contact form {
     width: 100%;
+  }
+}
+
+/* animations */
+@keyframes skew{
+  from{
+    transform: rotateY(90deg);
+  }
+  to{
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes drop{
+  from{
+    top: -300px;
+  }
+  to{
+    top: 0px;
   }
 }
 </style>
