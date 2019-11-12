@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <div @click="$router.push({ name: 'About' })" class="logo"><p>J</p></div>
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines.svg" width="30px" height="30px" alt="menu"></div>
     <div class="words-wrapper">
       <h1>Hello, I am Jan and I build</h1>
@@ -67,6 +68,30 @@ export default {
   top: 0;
   left: 0;
 }
+.about .logo{
+  position: absolute;
+  color: white;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.about .logo:hover{
+  animation: rotate .75s linear forwards;
+  animation-timing-function: ease;
+}
+.about .logo p{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  top: 1px;
+}
 .about .menu{
   position: absolute;
   right: 2%;
@@ -83,21 +108,26 @@ export default {
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
-  top: 90px;
+  top: 70px;
   width: 50%;
   left: 15px;
+  margin-top: 10px;
 }
 .about h1.applications{
   color: 	#cd6689;
+  margin-top: 0px;
 }
 .about h1.websites{
   color: #cd7766;
+  margin-top: 0px;
 }
 .about h1.market{
   color: #cd9166;
+  margin-top: 0px;
 }
 .about h1.native{
   color: #cd6677;
+  margin-top: 0px;
 }
 .about div .words{
   position: relative;

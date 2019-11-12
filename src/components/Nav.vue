@@ -1,5 +1,6 @@
 <template>
 <div class="page">
+  <div @click="$router.push({ name: 'About' })" class="logo"><p>J</p></div>
   <div class="menu-close" @click="$router.go(-1)"><img src="../assets/nav-icons/close-line.svg" width="30px" height="30px" alt="menu-close"></div>
   <div class="links">
     <div @click="$router.push({ name: 'About' })"><img src="../assets/nav-icons/menu.svg" width="40px" height="40px" alt="about"><h2 class="link-about">About me</h2></div>
@@ -51,6 +52,30 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
+}
+.page .logo{
+  position: absolute;
+  color: white;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.page .logo:hover{
+  animation: rotate .75s linear forwards;
+  animation-timing-function: ease;
+}
+.page .logo p{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  top: 1px;
 }
 .page .menu-close{
   position: absolute;
@@ -148,13 +173,21 @@ export default {
 }
 
 /* animations */
-
 @keyframes menu{
   from{
     width: 0px
   }
   to{
     width: 210px
+  }
+}
+
+@keyframes rotate{
+  from{
+    transform: rotateX(90deg);
+  }
+  to{
+    transform: rotateX(0deg);
   }
 }
 </style>
