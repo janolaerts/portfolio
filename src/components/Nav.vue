@@ -54,7 +54,7 @@ export default {
   left: 0;
 }
 .page .logo{
-  position: absolute;
+  position: fixed;
   color: white;
   border: 2px solid white;
   width: 50px;
@@ -66,10 +66,10 @@ export default {
   font-size: 40px;
   cursor: pointer;
 }
-.page .logo:hover{
+/*.page .logo:hover{
   animation: rotate .75s linear forwards;
   animation-timing-function: ease;
-}
+}*/
 .page .logo p{
   position: relative;
   text-align: center;

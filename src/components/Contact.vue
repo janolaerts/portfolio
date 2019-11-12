@@ -1,5 +1,6 @@
 <template>
   <div class="contact">
+    <div @click="$router.push({ name: 'About' })" class="logo"><p>J</p></div>
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines.svg" width="30px" height="30px" alt="menu"></div>
     <h1>Contact</h1>
     <form @submit.prevent="submitForm">
@@ -64,6 +65,33 @@ export default {
   cursor: pointer;
   z-index: 1000;
 }
+.contact .logo{
+  position: fixed;
+  color: black;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+/*.contact .logo:hover{
+  animation: rotate .75s linear forwards;
+  animation-timing-function: ease;
+}*/
+.contact .logo p{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  top: 1px;
+  z-index: 1002;
+  color: white;
+}
 .contact{
   position: absolute;
   width: 100%;
@@ -78,6 +106,9 @@ export default {
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: mediumaquamarine;
+  margin: 0;
+  position: relative;
+  top: 10px;
 }
 .contact .name{
   color: white;
@@ -92,6 +123,7 @@ export default {
   width: 50%;
   text-align: center;
   border-radius: 10px;
+  top: 40px;
 }
 .contact form input{
   width: 90%;
@@ -145,12 +177,27 @@ export default {
 }
 
 /* responsive design */
+@media all and (max-width: 991px){
+  .contact h1{
+    font-size: 40px;
+  }
+}
+
 @media all and (max-width: 768px){
+  .contact h1{
+    font-size: 40px;
+  }
   .contact form button{
     width:50%;
   }
   .contact form {
     width: 100%;
+  }
+}
+
+@media all and (max-width: 575px){
+  .contact h1{
+    font-size: 35px;
   }
 }
 

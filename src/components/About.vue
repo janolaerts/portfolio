@@ -69,7 +69,7 @@ export default {
   left: 0;
 }
 .about .logo{
-  position: absolute;
+  position: fixed;
   color: white;
   border: 2px solid white;
   width: 50px;
@@ -81,10 +81,10 @@ export default {
   font-size: 40px;
   cursor: pointer;
 }
-.about .logo:hover{
+/*.about .logo:hover{
   animation: rotate .75s linear forwards;
   animation-timing-function: ease;
-}
+}*/
 .about .logo p{
   position: relative;
   text-align: center;

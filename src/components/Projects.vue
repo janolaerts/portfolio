@@ -1,7 +1,8 @@
 <template>
   <div class="projects">
+    <div @click="$router.push({ name: 'About' })" class="logo"><p>J</p></div>
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
-    <h1 class="my-projects"><span>M</span><span>y</span><span>-</span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
+    <h1 class="my-projects">Projects</h1>
     <div class="projects-container">
       <div class="project1"><img width="400px" src="../assets/projects-photos/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
       <div class="project1-info">
@@ -9,7 +10,7 @@
         <p class="intro">An application to keep track of your sold products</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="javascript"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" alt="firebase"></p>
         <div class="buttons">
-          <button class="website"> <a href="https://jatha-ventas.web.app/" target="_blank">Visit website</a></button>
+          <button class="website"><a href="https://jatha-ventas.web.app/" target="_blank">Visit website</a></button>
           <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
         </div>
       </div>
@@ -39,7 +40,7 @@ export default {
   name: 'Projects',
   data(){
     return{
-      wiggle: false
+
     }
   }
 }
@@ -53,6 +54,32 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+}
+.projects .logo{
+  position: fixed;
+  color: black;
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 10px;
+  left: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+/*.projects .logo:hover{
+  animation: rotate .75s linear forwards;
+  animation-timing-function: ease;
+}*/
+.projects .logo p{
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  margin: 0;
+  top: 1px;
+  z-index: 1002;
 }
 .projects .menu{
   position: fixed;
@@ -70,46 +97,13 @@ export default {
   z-index: 1000;
   width: 100%;
   margin: 0;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, .5);
+  top: 10px;
 }
 .projects h1 span{
   position: relative;
   animation-timing-function: ease;
 }
-/*.projects h1 span:nth-child(1){
-  animation: slideLeft 1.5s linear forwards;
-}
-.projects h1 span:nth-child(2){
-  animation: slideLeft 1.4s linear forwards;
-}
-.projects h1 span:nth-child(3){
-  visibility: hidden;
-  animation: slideLeft 1.3s linear forwards;
-}
-.projects h1 span:nth-child(4){
-  animation: slideLeft 1.2s linear forwards;
-}
-.projects h1 span:nth-child(5){
-  animation: slideLeft 1.1s linear forwards;
-}
-.projects h1 span:nth-child(6){
-  animation: slideLeft 1s linear forwards;
-}
-.projects h1 span:nth-child(7){
-  animation: slideLeft .9s linear forwards;
-}
-.projects h1 span:nth-child(8){
-  animation: slideLeft .8s linear forwards;
-}
-.projects h1 span:nth-child(9){
-  animation: slideLeft .7s linear forwards;
-}
-.projects h1 span:nth-child(10){
-  animation: slideLeft .6s linear forwards;
-}
-.projects h1 span:nth-child(11){
-  animation: slideLeft .5s linear forwards;
-}*/
 .projects-container{
   position: relative;
   background: white;
@@ -281,7 +275,7 @@ export default {
 
 @media all and (max-width: 575px){
   .projects h1.my-projects{
-    font-size: 30px;
+    font-size: 35px;
   }
   .projects-container .project1 img{
     width: 300px;
