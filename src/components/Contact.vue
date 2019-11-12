@@ -79,10 +79,9 @@ export default {
   cursor: pointer;
   z-index: 1001;
 }
-/*.contact .logo:hover{
-  animation: rotate .75s linear forwards;
-  animation-timing-function: ease;
-}*/
+.contact .logo:hover{
+  border-radius: 10px;
+}
 .contact .logo p{
   position: relative;
   text-align: center;
@@ -178,6 +177,13 @@ export default {
 
 /* responsive design */
 @media all and (max-width: 991px){
+  .contact .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .contact .logo p{
+    top: -3px;
+  }
   .contact h1{
     font-size: 40px;
   }

@@ -61,7 +61,10 @@ export default {
 
 <style>
 .about{
-  background: black;
+  background: url('../assets/pictures/wedding.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -81,10 +84,9 @@ export default {
   font-size: 40px;
   cursor: pointer;
 }
-/*.about .logo:hover{
-  animation: rotate .75s linear forwards;
-  animation-timing-function: ease;
-}*/
+.about .logo:hover{
+  border-radius: 10px;
+}
 .about .logo p{
   position: relative;
   text-align: center;
@@ -114,19 +116,19 @@ export default {
   margin-top: 10px;
 }
 .about h1.applications{
-  color: 	#cd6689;
+  color: mediumseagreen;
   margin-top: 0px;
 }
 .about h1.websites{
-  color: #cd7766;
+  color: moccasin;
   margin-top: 0px;
 }
 .about h1.market{
-  color: #cd9166;
+  color: palegoldenrod;
   margin-top: 0px;
 }
 .about h1.native{
-  color: #cd6677;
+  color: mediumspringgreen;
   margin-top: 0px;
 }
 .about div .words{
@@ -169,9 +171,9 @@ export default {
 }
 .about .contact button{
   position: relative;
-  border: 2px solid #cd6689;
+  border: 2px solid white;
   padding: 10px;
-  color:#cd6689;
+  color:white;
   width: 170px;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
@@ -180,9 +182,9 @@ export default {
   bottom: 120px;
 }
 .about .contact button:hover{
-  border: 2px solid #cd6689;
+  border: 2px solid white;
   color: black;
-  background: #cd6689;
+  background: white;
 }
 .about .arrow{
   position: absolute;
@@ -224,6 +226,13 @@ export default {
 }
 
 @media all and (max-width: 575px){
+  .about .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .about .logo p{
+    top: -3px;
+  }
   .about .words-wrapper h1{
     font-size: 25px;
     top: 60px;
@@ -240,7 +249,13 @@ export default {
     height: 30px;
   }
   .about .technologies{
-    bottom: 70px;
+    bottom: 50px;
+  }
+  .about .contact button{
+    bottom: 110px;
+  }
+  .about .arrow{
+    bottom: 0%;
   }
 }
 </style>

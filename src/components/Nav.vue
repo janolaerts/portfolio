@@ -66,10 +66,9 @@ export default {
   font-size: 40px;
   cursor: pointer;
 }
-/*.page .logo:hover{
-  animation: rotate .75s linear forwards;
-  animation-timing-function: ease;
-}*/
+.page .logo:hover{
+  border-radius: 10px;
+}
 .page .logo p{
   position: relative;
   text-align: center;
@@ -163,7 +162,13 @@ export default {
 }
 
 @media all and (max-width: 575px){
-
+  .page .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .page .logo p{
+    top: -3px;
+  }
   .links{
     right: 2%;
   }
@@ -179,15 +184,6 @@ export default {
   }
   to{
     width: 210px
-  }
-}
-
-@keyframes rotate{
-  from{
-    transform: rotateX(90deg);
-  }
-  to{
-    transform: rotateX(0deg);
   }
 }
 </style>

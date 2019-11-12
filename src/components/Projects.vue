@@ -69,10 +69,9 @@ export default {
   cursor: pointer;
   z-index: 1001;
 }
-/*.projects .logo:hover{
-  animation: rotate .75s linear forwards;
-  animation-timing-function: ease;
-}*/
+.projects .logo:hover{
+  border-radius: 10px;
+}
 .projects .logo p{
   position: relative;
   text-align: center;
@@ -274,6 +273,13 @@ export default {
 }
 
 @media all and (max-width: 575px){
+  .projects .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .projects .logo p{
+    top: -3px;
+  }
   .projects h1.my-projects{
     font-size: 35px;
   }
