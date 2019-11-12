@@ -1,9 +1,9 @@
 <template>
   <div class="projects">
-    <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
+    <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
     <h1 class="my-projects"><span>M</span><span>y</span><span>-</span><span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
     <div class="projects-container">
-      <div class="project1"><img width="400px" src="../assets/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
+      <div class="project1"><img width="400px" src="../assets/projects-photos/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
       <div class="project1-info">
         <h1>Jatha Ventas</h1>
         <p class="intro">An application to keep track of your sold products</p>
@@ -13,7 +13,7 @@
           <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
         </div>
       </div>
-      <div class="project2"><img width="400px" src="../assets/Taco App Laptop.png" alt="taco-app"></div>
+      <div class="project2"><img width="400px" src="../assets/projects-photos/Taco App Laptop.png" alt="taco-app"></div>
       <div class="project2-info">
         <h1>Taco App</h1>
         <p class="intro">A mockup of an order application</p>
@@ -23,7 +23,7 @@
           <button><a href="https://github.com/janolaerts/Taco-App" target="_blank">Source code</a></button>
         </div>
       </div>
-      <div class="project3"><img width="400px" src="../assets/Askbot Laptop.png" alt=""></div>
+      <div class="project3"><img width="400px" src="../assets/projects-photos/Askbot Laptop.png" alt=""></div>
       <div class="project3-info">
         <h1>Askbot</h1>
         <p class="intro">An API which allows to upload and ask questions</p>

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/three-horizontal-lines.svg" width="30px" height="30px" alt="menu"></div>
+    <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines.svg" width="30px" height="30px" alt="menu"></div>
     <div class="words-wrapper">
       <h1>Hello, I am Jan and I build</h1>
       <h1 :class="`words ${this.word}`">{{ word }}</h1>
@@ -8,14 +8,14 @@
     <div class="technologies">
       <h1>I use <span>{{ technology }}</span></h1>
       <div class="logos">
-        <img @mouseover="showTech('HTML')" height="32" width="32" src="../assets/html5.svg" />
-        <img @mouseover="showTech('CSS')" height="32" width="32" src="../assets/css3.svg" />
-        <img @mouseover="showTech('JavaScript')" height="32" width="32" src="../assets/javascript.svg" />
-        <img @mouseover="showTech('React.js')" height="32" width="32" src="../assets/react.svg" />
-        <img @mouseover="showTech('Vue.js')" height="32" width="32" src="../assets/vue-dot-js.svg" />
-        <img @mouseover="showTech('Node.js')" height="32" width="32" src="../assets/node-dot-js.svg" />
-        <img @mouseover="showTech('Firebase (db & auth)')" height="32" width="32" src="../assets/firebase.svg" />
-        <img @mouseover="showTech('MongoDB')" height="32" width="32" src="../assets/mongodb.svg" />
+        <img @mouseover="showTech('HTML')" height="32" width="32" src="../assets/technology-logos/html5.svg" />
+        <img @mouseover="showTech('CSS')" height="32" width="32" src="../assets/technology-logos/css3.svg" />
+        <img @mouseover="showTech('JavaScript')" height="32" width="32" src="../assets/technology-logos/javascript.svg" />
+        <img @mouseover="showTech('React.js')" height="32" width="32" src="../assets/technology-logos/react.svg" />
+        <img @mouseover="showTech('Vue.js')" height="32" width="32" src="../assets/technology-logos/vue-dot-js.svg" />
+        <img @mouseover="showTech('Node.js')" height="32" width="32" src="../assets/technology-logos/node-dot-js.svg" />
+        <img @mouseover="showTech('Firebase (db & auth)')" height="32" width="32" src="../assets/technology-logos/firebase.svg" />
+        <img @mouseover="showTech('MongoDB')" height="32" width="32" src="../assets/technology-logos/mongodb.svg" />
       </div>
     </div>
     <div class="contact">
@@ -86,7 +86,6 @@ export default {
   top: 90px;
   width: 50%;
   left: 15px;
-
 }
 .about h1.applications{
   color: 	#cd6689;
@@ -132,10 +131,11 @@ export default {
 }
 .about .contact{
   position: absolute;
-  display: inline-block;
-  bottom: 80px;
+  display: block;
   width: 100%;
   text-align: center;
+  height: 100px;
+  top: 100%;
 }
 .about .contact button{
   position: relative;
@@ -146,6 +146,8 @@ export default {
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
+  z-index: 1;
+  bottom: 120px;
 }
 .about .contact button:hover{
   border: 2px solid #cd6689;
@@ -211,5 +213,4 @@ export default {
     bottom: 70px;
   }
 }
-
 </style>

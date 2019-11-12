@@ -1,23 +1,20 @@
 <template>
 <div class="page">
-  <div class="menu-close" @click="$router.go(-1)"><img src="../assets/close-line.svg" width="30px" height="30px" alt="menu-close"></div>
+  <div class="menu-close" @click="$router.go(-1)"><img src="../assets/nav-icons/close-line.svg" width="30px" height="30px" alt="menu-close"></div>
   <div class="links">
-    <div @click="$router.push({ name: 'About' })"><img src="../assets/menu.svg" width="40px" height="40px" alt="about"><h2 class="link-about">About me</h2></div>
-    <div @click="$router.push({ name: 'Projects' })"><img src="../assets/code.svg" width="40px" height="40px" alt="project"><h2 class="link-my-projects">My projects</h2></div>
-    <a @click="downloadPDF"><img src="../assets/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
-    <a href="https://github.com/janolaerts" target="_blank"><img src="../assets/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
+    <div @click="$router.push({ name: 'About' })"><img src="../assets/nav-icons/menu.svg" width="40px" height="40px" alt="about"><h2 class="link-about">About me</h2></div>
+    <div @click="$router.push({ name: 'Projects' })"><img src="../assets/nav-icons/code.svg" width="40px" height="40px" alt="project"><h2 class="link-my-projects">My projects</h2></div>
+    <a @click="downloadPDF"><img src="../assets/nav-icons/text-file-line.svg" width="40px" height="40px" alt="resume"><h2 class="link-resume">Resume</h2></a>
+    <a href="https://github.com/janolaerts" target="_blank"><img src="../assets/nav-icons/github.svg" width="40px" height="40px" alt="github"><h2 class="link-github">Github</h2></a>
   </div>
-  <!--<pdf src="@/assets/curriculum.pdf"></pdf>-->
 </div>
 </template>
 
 <script>
-//import pdf from 'vue-pdf'
 import axios from 'axios'
 
 export default {
   name: 'Nav',
-  //components: { pdf },
   data(){
     return {
   
@@ -27,7 +24,7 @@ export default {
     downloadPDF(){
       axios({
         method: 'GET',
-        url: 'curriculum.pdf',
+        url: 'Resume.pdf',
         responseType: 'blob'
       })
       .then(response => {
@@ -35,7 +32,7 @@ export default {
         let fileLink = document.createElement('a')
 
         fileLink.href = fileURL
-        fileLink.setAttribute('download', 'curriculum.pdf')
+        fileLink.setAttribute('download', 'Resume Jan Olaerts.pdf')
         document.body.appendChild(fileLink)
         
         fileLink.click()
