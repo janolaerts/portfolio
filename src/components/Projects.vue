@@ -96,7 +96,7 @@ export default {
   z-index: 1000;
   width: 100%;
   margin: 0;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.8);
   top: 10px;
 }
 .projects h1 span{
@@ -260,6 +260,12 @@ export default {
 }
 
 /* responsive design */
+@media all and (min-width: 991px){
+  .projects-container{
+    width: 800px;
+  }
+}
+
 @media all and (max-width: 991px){
   .projects h1.my-projects{
     font-size: 40px;
