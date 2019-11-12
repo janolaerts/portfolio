@@ -262,7 +262,7 @@ export default {
 /* responsive design */
 @media all and (min-width: 991px){
   .projects-container{
-    width: 800px;
+    width: 1000px;
   }
 }
 
