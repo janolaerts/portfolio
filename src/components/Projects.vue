@@ -113,6 +113,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   border-radius: 10px;
+  overflow: hidden;
 }
 .projects-container h1{
   color: #cd7766;
