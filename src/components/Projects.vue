@@ -14,14 +14,14 @@
           <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
         </div>
       </div>
-      <div class="project2"><img width="400px" src="../assets/projects-photos/Taco App Laptop.png" alt="taco-app"></div>
+      <div class="project2"><img width="400px" src="../assets/projects-photos/Jatha Psicopedagogia Laptop.png" alt="jatha psicopedagogia"></div>
       <div class="project2-info">
-        <h1>Taco App</h1>
-        <p class="intro">A mockup of an order application</p>
+        <h1>Jatha Psicopedagogía</h1>
+        <p class="intro">A website with a web shop</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" alt="react"></p>
         <div class="buttons">
-          <button class="website"><a href="https://taco-app-ad29b.web.app/" target="_blank">Visit website</a></button>
-          <button><a href="https://github.com/janolaerts/Taco-App" target="_blank">Source code</a></button>
+          <button class="website"><a href="https://jatha-psicopedagogia.web.app/" target="_blank">Visit website</a></button>
+          <button><a href="https://github.com/janolaerts/jatha-psichopedagogia" target="_blank">Source code</a></button>
         </div>
       </div>
       <div class="project3"><img width="400px" src="../assets/projects-photos/Askbot Laptop.png" alt=""></div>
