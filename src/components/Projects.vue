@@ -24,12 +24,15 @@
           <button><a href="https://github.com/janolaerts/jatha-psichopedagogia" target="_blank">Source code</a></button>
         </div>
       </div>
-      <div class="project3"><img width="400px" src="../assets/projects-photos/Askbot Laptop.png" alt=""></div>
+      <div class="project3"><img width="400px" src="../assets/projects-photos/Violeta Bazar Laptop.png" alt=""></div>
       <div class="project3-info">
-        <h1>Askbot</h1>
-        <p class="intro">An API which allows to upload and ask questions</p>
+        <h1>Violeta Bazar</h1>
+        <p class="intro">An ecommerce store</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/node-dot-js.svg" alt="node"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" alt="mongodb"> </p>
-        <button><a href="https://github.com/janolaerts/Askbot" target="_blank">Source code</a></button>
+        <div class="buttons">
+          <button class="website"><a href="https://violeta-bazar.herokuapp.com/" target="_blank">Visit website</a></button>
+          <button><a href="https://github.com/janolaerts/Violeta-Bazar" target="_blank">Source code</a></button>
+        </div>
       </div>
     </div>
   </div>
@@ -159,29 +162,6 @@ export default {
   position: relative;
   top: -5px;
 }
-.projects-container .project1-info .buttons{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-.projects-container .project1-info button{
-  padding: 10px 5px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: none;
-  border: 2px solid #cd7766;
-  cursor: pointer;
-  width: 100px;
-  position: relative;
-  bottom: 2px;
-}
-.projects-container .project1-info button:hover{
-  background: #cd7766;
-}
-.projects-container .project1-info .buttons .website{
-  position: relative;
-  justify-self:end;
-}
 .projects-container .project2-info{
   flex-grow: 1;
   flex-basis: 400px;
@@ -200,29 +180,6 @@ export default {
   position: relative;
   top: -5px;
 }
-.projects-container .project2-info .buttons{
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-}
-.projects-container .project2-info button{
-  padding: 10px 5px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: none;
-  border: 2px solid #cd7766;
-  cursor: pointer;
-  width: 100px;
-  position: relative;
-  bottom: 2px;
-}
-.projects-container .project2-info .buttons .website{
-  position: relative;
-  justify-self: end;
-}
-.projects-container .project2-info button:hover{
-  background: #cd7766;
-}
 .projects-container .project3-info{
   flex-grow: 1;
   flex-basis: 400px;
@@ -240,24 +197,34 @@ export default {
   position: relative;
   top: -5px;
 }
-.projects-container .project3-info button{
-  padding: 10px 10px;
+
+.projects .projects-container a{
+  text-decoration: none;
+  color:navy;
+}
+
+.projects-container .buttons{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.projects-container button{
+  padding: 10px 5px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background: none;
   border: 2px solid #cd7766;
   cursor: pointer;
-  margin-bottom: 5px;
-  display: block;
-  margin: 0 auto 5px auto;
+  width: 100px;
   position: relative;
-  bottom: 3px;
+  bottom: 2px;
 }
-.projects-container .project3-info button:hover{
+.projects-container .buttons .website{
+  position: relative;
+  justify-self: end;
+}
+.projects-container button:hover{
   background: #cd7766;
-}
-.projects .projects-container a{
-  text-decoration: none;
-  color:navy;
 }
 
 /* responsive design */
