@@ -4,18 +4,8 @@
     <div class="menu" @click="$router.push({ name: 'Nav' })"><img src="../assets/nav-icons/three-horizontal-lines-darker.svg" width="30px" height="30px" alt="menu"></div>
     <h1 class="my-projects">Projects</h1>
     <div class="projects-container">
-      <div class="project1"><img width="400px" src="../assets/projects-photos/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
+      <div class="project1"><img width="400px" src="../assets/projects-photos/Jatha Psicopedagogia Laptop.png" alt="jatha psicopedagogia"></div>
       <div class="project1-info">
-        <h1>Jatha Ventas</h1>
-        <p class="intro">An application to keep track of your sold products</p>
-        <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="javascript"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" alt="firebase"></p>
-        <div class="buttons">
-          <button class="website"><a href="https://jatha-ventas.web.app/" target="_blank">Visit website</a></button>
-          <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
-        </div>
-      </div>
-      <div class="project2"><img width="400px" src="../assets/projects-photos/Jatha Psicopedagogia Laptop.png" alt="jatha psicopedagogia"></div>
-      <div class="project2-info">
         <h1>Jatha Psicopedagogía</h1>
         <p class="intro">A website with a web shop</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" alt="react"></p>
@@ -24,14 +14,24 @@
           <button><a href="https://github.com/janolaerts/jatha-psichopedagogia" target="_blank">Source code</a></button>
         </div>
       </div>
-      <div class="project3"><img width="400px" src="../assets/projects-photos/Violeta Bazar Laptop.png" alt=""></div>
-      <div class="project3-info">
+      <div class="project2"><img width="400px" src="../assets/projects-photos/Violeta Bazar Laptop.png" alt=""></div>
+      <div class="project2-info">
         <h1>Violeta Bazar</h1>
         <p class="intro">An ecommerce store</p>
         <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/node-dot-js.svg" alt="node"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" alt="mongodb"> </p>
         <div class="buttons">
           <button class="website"><a href="https://violeta-bazar.herokuapp.com/" target="_blank">Visit website</a></button>
           <button><a href="https://github.com/janolaerts/Violeta-Bazar" target="_blank">Source code</a></button>
+        </div>
+      </div>
+      <div class="project3"><img width="400px" src="../assets/projects-photos/Jatha Ventas Laptop.png" alt="jatha-ventas"></div>
+      <div class="project3-info">
+        <h1>Jatha Ventas</h1>
+        <p class="intro">An application to keep track of your sold products</p>
+        <p class="technologies">Made with <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="javascript"> and <img width="32px" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/firebase.svg" alt="firebase"></p>
+        <div class="buttons">
+          <button class="website"><a href="https://jatha-ventas.web.app/" target="_blank">Visit website</a></button>
+          <button><a href="https://github.com/janolaerts/Jatha-Ventas" target="_blank">Source code</a></button>
         </div>
       </div>
     </div>
