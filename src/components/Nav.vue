@@ -25,7 +25,7 @@ export default {
     downloadPDF(){
       axios({
         method: 'GET',
-        url: 'Resume.pdf',
+        url: 'Resume Jan Olaerts.pdf',
         responseType: 'blob'
       })
       .then(response => {
